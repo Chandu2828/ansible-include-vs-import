@@ -4,7 +4,7 @@
 
 - name: common role msg-2
   debug:
-    msg: "Hi, I am from common role MSG-2"
+    msg: "Hi, I am from common role MSG-2 {{ item }}"
   when: os == "RedHat" # import role condition applies for all the tasks
 
 - name: common role msg-3
