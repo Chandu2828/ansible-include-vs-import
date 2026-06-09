@@ -1,0 +1,11 @@
+- name: common role msg-1
+  debug:
+    msg: "Hi, I am from common role MSG-1"
+
+- name: common role msg-2
+  debug:
+    msg: "Hi, I am from common role MSG-2 {{ item }}"
+
+- name: change the fact
+  debug:
+    msg: 
