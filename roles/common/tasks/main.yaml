@@ -5,10 +5,15 @@
 - name: common role msg-2
   debug:
     msg: "Hi, I am from common role MSG-2"
+  when: os == "RedHat" # import role condition applies for all the tasks
 
 - name: common role msg-3
   debug:
     msg: "Hi, I am from common role MSG-3"
+
+- name: change the fact
+  set_fact:
+    os: "Debian" # overriding the previous loaded variable
 
 - name: common role msg-4
   debug:
