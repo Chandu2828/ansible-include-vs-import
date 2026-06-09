@@ -4,8 +4,12 @@
 
 - name: common role msg-2
   debug:
-    msg: "Hi, I am from common role MSG-2 {{ item }}"
+    msg: "Hi, I am from common role MSG-2"
 
-- name: change the fact
+- name: common role msg-3
   debug:
-    msg: 
+    msg: "Hi, I am from common role MSG-3"
+
+- name: common role msg-4
+  debug:
+    msg: "Hi, I am from common role MSG-4"
