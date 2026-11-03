@@ -2,9 +2,11 @@
   import_role:
   # include_role:
     name: common
-  tags: 
+  tags: # ansible-playbook main.yaml -t hi 
   - hi
   when: os == "Redhat"
   loop:
   - Purna 
   - Chand
+
+# tags will not be respected and cascaded by include_role, but import_role will respect the tags
