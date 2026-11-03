@@ -9,4 +9,5 @@
   - Purna 
   - Chand
 
+# When you execute the playbook with include role it 
 # tags will not be respected and cascaded by include_role, but import_role will respect the tags

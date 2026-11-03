@@ -20,6 +20,9 @@
     msg: "Hi, I am from common role MSG-4"
 
 # - name: call role-2
-#   # import_role:
+#   # import_role: 
+# import_role parse the playbook before execution. So as role-3 is not present it will stop playbook execution
 #   include_role:
+# include_role parse the playbook at the time of execution. So all the tasks are executed first and then last one will be refused
 #     name: role-3
+# import_role evaluates and then executes the playbook but include_role evaluates at the time of execution.
