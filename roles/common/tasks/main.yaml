@@ -12,8 +12,10 @@
     msg: "Hi, I am from common role MSG-3"
 
 - name: change the fact
-  set_fact:
+  set_fact: # It will create a variable within the playbook
     os: "Debian" # overriding the previous loaded variable
+# As a result when we run the main.yaml with import rule the tasks from this section will be skipped as it doesn't sastify the condition
+# include role doesn't care about conditions
 
 - name: common role msg-4
   debug:

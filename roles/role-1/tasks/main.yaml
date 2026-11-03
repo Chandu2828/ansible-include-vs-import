@@ -4,10 +4,16 @@
     name: common
   tags: # ansible-playbook main.yaml -t hi 
   - hi
-  when: os == "Redhat"
-  loop:
+  when: os == "Redhat" # This condition is applied to all the tasks in common main.yaml
+  loop: # Include role executes all the tasks with the variable Purna and then again execute all the tasks with Chand
   - Purna 
   - Chand
 
-# When you execute the playbook with include role it 
-# tags will not be respected and cascaded by include_role, but import_role will respect the tags
+# When you execute the playbook with include role it doesn't print the main.yaml in common
+# When you execute the playbook with import role it will print the main.yaml in common
+# 1. tags will not be respected and cascaded by include_role, but import_role will respect the tags
+# 2. import_role parse the playbook before execution, include_role parse the playbook at the time of execution i.e., import_role evaluates and then executes the playbook but include_role evaluates at the time of execution.
+# 3. The condition applied at import_role applies to all the tasks. include_role role does not care about conditions
+# 4. You cannot use loops on 'import_role' statements. You should use 'include_role' instead
+
+ 
