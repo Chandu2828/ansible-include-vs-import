@@ -9,8 +9,8 @@
   - Purna 
   - Chand
 
-# When you execute the playbook with include role it doesn't print the main.yaml in common
-# When you execute the playbook with import role it will print the main.yaml in common
+# When you execute the playbook with include role it doesn't print the main.yaml in common as it doesn't respect tags.
+# When you execute the playbook with import role it will print the main.yaml in common as it respect tags. 
 # 1. tags will not be respected and cascaded by include_role, but import_role will respect the tags
 # 2. import_role parse the playbook before execution, include_role parse the playbook at the time of execution i.e., import_role evaluates and then executes the playbook but include_role evaluates at the time of execution.
 # 3. The condition applied at import_role applies to all the tasks. include_role role does not care about conditions
